@@ -1,14 +1,8 @@
 ---
 links:
-  - title: Netlify CMS
-    url: "https://www.netlifycms.org/"
-    desc: Open source content management for your Git workflow
-  - title: Eleventy
-    url: "https://www.11ty.dev/"
-    desc: Eleventy is a simpler static site generator.
-  - title: Alpine.js
-    url: "https://github.com/alpinejs/alpine"
-    desc: A minimal framework for composing JavaScript behavior in your markup.
-  - title: Tailwind CSS
-    url: "https://tailwindcss.com/"
-    desc: A utility-first CSS framework for rapidly building custom designs.
+  - title: Scaly Anteaters
+    url: "https://en.wikipedia.org/wiki/Pangolin"
+    desc: The helpful Wikipedia entry for Pangolins.
+  - title: Pangolin Trivia
+    url: "https://www.wwf.org.uk/learn/fascinating-facts/pangolins"
+    desc: Top 5 facts about Pangolins from the WWF.
