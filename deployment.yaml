@@ -1,0 +1,49 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: site
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: site
+  template:
+    metadata:
+      labels:
+        name: site
+    spec:
+      containers:
+      - name: site
+        image: image/name:tag1
+        ports:
+        - name: http
+          containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: site
+  labels:
+    name: site
+spec:
+  selector:
+    name: site
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: site
+spec:
+  rules:
+  - host: example.com
+    http:
+      paths:
+      - backend:
+          serviceName: site
+          servicePort: 80
