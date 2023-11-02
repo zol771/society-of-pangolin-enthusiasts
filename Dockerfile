@@ -18,4 +18,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # USER 101
 
 # Copy the static website into the default location
-COPY ./site /usr/share/nginx/html
+COPY ./_site /usr/share/nginx/html
