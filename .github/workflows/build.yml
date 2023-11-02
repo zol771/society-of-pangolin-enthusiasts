@@ -17,7 +17,7 @@ jobs:
       - name: Build Elevnty site
         uses: TartanLlama/actions-eleventy@v1.3
         with:
-          args: --output _site
+          args: --output site
           install_dependencies: true
 
       - name: Set up QEMU
