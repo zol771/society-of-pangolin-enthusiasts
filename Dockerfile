@@ -18,4 +18,4 @@ RUN touch /var/run/nginx.pid && \
 USER 101
 
 # Copy the static website into the default location
-COPY html /usr/share/nginx/html
+COPY _site /usr/share/nginx/html
