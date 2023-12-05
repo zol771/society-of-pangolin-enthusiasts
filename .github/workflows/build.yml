@@ -47,8 +47,8 @@ jobs:
           tags: tag:devrel-ci
 
       - name: Do the deploy thing
-      run: |
-        ssh -o "StrictHostKeyChecking no" ${{ secrets.VPS_USER}}@devrel-prodbox-nyc "
-          docker compose pull
-          docker compose up -d
-        "
+        run: |
+          ssh -o "StrictHostKeyChecking no" ${{ secrets.VPS_USER }}@devrel-prodbox-nyc "
+            docker compose pull
+            docker compose up -d
+          "
