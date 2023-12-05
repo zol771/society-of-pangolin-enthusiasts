@@ -21,13 +21,6 @@ jobs:
       - run: npm install
       - run: npm run build
 
-
-    #   - name: Build Elevnty site
-    #     uses: TartanLlama/actions-eleventy@v1.3
-    #     with:
-    #       args: --output site
-    #       install_dependencies: true
-
       - uses: docker/setup-qemu-action@v3
       - uses: docker/setup-buildx-action@v3
 
