@@ -7,3 +7,5 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copy the static website into the default location
 COPY ./_site /usr/share/nginx/html
+
+EXPOSE 8080
