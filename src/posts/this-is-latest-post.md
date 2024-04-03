@@ -1,7 +1,7 @@
 ---
 title: A Day at the Zoo through the eyes of a Pangolin
 description: Join us on an imaginative adventure as we explore the perfect day out for a pangolin at the zoo.
-date: 2020-10-30
+date: 2023-10-30
 author: alexktz
 tags: pangolin zoo
 ---
