@@ -38,7 +38,7 @@ jobs:
             push: true
             tags: |
                 ghcr.io/tailscale-dev/society-of-pangolin-enthusiasts:latest
-          
+
       - name: Connect Tailscale
         uses: tailscale/github-action@v2
         with:
