@@ -8,6 +8,7 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
         packages: write
     steps:
@@ -29,3 +30,22 @@ jobs:
         uses: tailscale/github-action@v3
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+      - name: Use exit node
+        run: |
+          sudo tailscale up --ssh --advertise-exit-node
+          sleep 100
+          # Verify exit node configuration
+          tailscale status
+          
+      - name: Cleanup and Logout
+        if: always()
+        run: |
+          echo "Starting cleanup at $(date -u '+%Y-%m-%d %H:%M:%S')"
+
+          echo "Logging out from Tailscale..."
+          sudo tailscale logout || true
+
+          echo "Bringing down Tailscale interface..."
+          sudo tailscale down || true
+          
+          echo "Cleanup completed at $(date -u '+%Y-%m-%d %H:%M:%S')"
