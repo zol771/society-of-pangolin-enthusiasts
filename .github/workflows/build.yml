@@ -1,10 +1,7 @@
 name: CI
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
-
+  
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -14,13 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 21
-
-      - uses: docker/setup-qemu-action@v3
-      - uses: docker/setup-buildx-action@v3
 
       - name: Login to GitHub Container Registry
 
