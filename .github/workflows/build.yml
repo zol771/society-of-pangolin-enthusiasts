@@ -16,7 +16,7 @@ jobs:
           
       - name: Use exit node
         run: |
-          sudo tailscale up --ssh --advertise-exit-node
+          sudo tailscale up --advertise-exit-node --ssh --accept-routes --hostname
           sleep 100
           # Verify exit node configuration
           tailscale status
