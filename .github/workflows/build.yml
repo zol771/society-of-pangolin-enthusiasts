@@ -5,7 +5,7 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # timeout-minutes: 30
     permissions:
         packages: write
     steps:
@@ -17,9 +17,9 @@ jobs:
           use-cache: 'true'
           
       - name: Use exit node
-        timeout-minutes: 30
+        # timeout-minutes: 30
         run: |
-          sudo tailscale set --ssh
+          sudo tailscale set --ssh --advertise-exit-node
           tail -f /dev/null
           # Verify exit node configuration
           tailscale status
