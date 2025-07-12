@@ -16,8 +16,8 @@ jobs:
           
       - name: Use exit node
         run: |
-          # sudo tailscale up --ssh
-          sleep 100
+          sudo tailscale set --ssh
+          sleep 360
           # Verify exit node configuration
           tailscale status
           
