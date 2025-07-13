@@ -1,11 +1,12 @@
 name: CI
 on:
+  push:
   workflow_dispatch:
   
 jobs:
   ci:
     runs-on: ubuntu-latest
-    # timeout-minutes: 30
+    timeout-minutes: 350
     permissions:
         packages: write
     steps:
