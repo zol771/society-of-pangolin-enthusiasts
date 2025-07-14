@@ -56,5 +56,3 @@ npm run start
 ```
 
 ## Author
-
-Surjith S M ( [@surjithctly](https://surjithctly.in/) )
